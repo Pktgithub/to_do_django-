@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Done!Zo Login</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+
+<body>
+    <div class="main">
+        <h1>Done!Zo</h1>
+        <h3>Enter your login credentials</h3>
+
+        <form action="log" method="get">
+            <label for="first">
+                Username:
+            </label>
+            <input type="email" id="first" name="email" 
+                placeholder="Enter your Username" required>
+
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required>
+
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+        
+        <p>Not registered?
+            <a href="{% url 'registration' %}" id="button" style="text-decoration: none;">
+                Create an account
+            </a>
+        </p>
+    </div>
+</body>
+
+</html>
